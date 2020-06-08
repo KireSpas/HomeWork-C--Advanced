@@ -1,0 +1,13 @@
+D:\Akademija\5.C#-ADVANCED\Class01\Task03\bin\Debug\netcoreapp3.1\Task03.exe
+D:\Akademija\5.C#-ADVANCED\Class01\Task03\bin\Debug\netcoreapp3.1\Task03.deps.json
+D:\Akademija\5.C#-ADVANCED\Class01\Task03\bin\Debug\netcoreapp3.1\Task03.runtimeconfig.json
+D:\Akademija\5.C#-ADVANCED\Class01\Task03\bin\Debug\netcoreapp3.1\Task03.runtimeconfig.dev.json
+D:\Akademija\5.C#-ADVANCED\Class01\Task03\bin\Debug\netcoreapp3.1\Task03.dll
+D:\Akademija\5.C#-ADVANCED\Class01\Task03\bin\Debug\netcoreapp3.1\Task03.pdb
+D:\Akademija\5.C#-ADVANCED\Class01\Task03\obj\Debug\netcoreapp3.1\Task03.csprojAssemblyReference.cache
+D:\Akademija\5.C#-ADVANCED\Class01\Task03\obj\Debug\netcoreapp3.1\Task03.AssemblyInfoInputs.cache
+D:\Akademija\5.C#-ADVANCED\Class01\Task03\obj\Debug\netcoreapp3.1\Task03.AssemblyInfo.cs
+D:\Akademija\5.C#-ADVANCED\Class01\Task03\obj\Debug\netcoreapp3.1\Task03.csproj.CoreCompileInputs.cache
+D:\Akademija\5.C#-ADVANCED\Class01\Task03\obj\Debug\netcoreapp3.1\Task03.dll
+D:\Akademija\5.C#-ADVANCED\Class01\Task03\obj\Debug\netcoreapp3.1\Task03.pdb
+D:\Akademija\5.C#-ADVANCED\Class01\Task03\obj\Debug\netcoreapp3.1\Task03.genruntimeconfig.cache
