@@ -16,6 +16,12 @@ namespace Quizz.App
                 var user = repository.StudentOrTeacherLogIn();
                 if (user.Student != null)
                 {
+                    if(user.Student.DoneWithTheTest == true)
+                    {
+                        Console.WriteLine("You already compleated the test. Logging you out");
+                        Thread.Sleep(3000);
+                        break;
+                    }
                     repository.Test(user.Student);
                 }
                 else if (user.Teacher != null)
@@ -51,7 +57,7 @@ namespace Quizz.App
                 }
                 else
                 {
-                    Console.WriteLine("Wrong number selected");
+                    Environment.Exit(0);
                 }
             }
         }

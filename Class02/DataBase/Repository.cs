@@ -1,6 +1,7 @@
 ﻿using Business.Library.Classes;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -32,7 +33,8 @@ namespace DataBase
         public Student LogInStudent(List<Student> students)
         {
             Console.WriteLine("Student, Welcome to Quizz. Please Log in");
-            while (true)
+            int counter = 0;
+            while (counter < 3)
             {
                 
                 Console.WriteLine("Enter a username");
@@ -41,7 +43,7 @@ namespace DataBase
                 
                 Console.WriteLine("Enter a password");
                 string password = Console.ReadLine();
-                
+
                 if (validateUsername != null && validateUsername.Password == password)
                 {
                     Console.WriteLine($"Welcome {validateUsername.FullName}.You are successfully logged in.");
@@ -51,14 +53,18 @@ namespace DataBase
                 {
                     Console.WriteLine("Wrong Username or Password.Please try again");
                 }
-                
+                counter++;
             }
+            Console.WriteLine("You entered wrong username/password 3 times. App is closing");
+            Thread.Sleep(3000);
+            return null;
         }
 
         public Teacher LogInTeacher(List<Teacher> teachers)
         {
             Console.WriteLine("Teacher,Welcome to Quizz App. Please Log in");
-            while (true)
+            int counter = 0;
+            while (counter < 3)
             {
                 
                 Console.WriteLine("Enter a username");
@@ -77,8 +83,11 @@ namespace DataBase
                 {
                     Console.WriteLine("Wrong Username or Password.Please try again");
                 }
-
+                counter++;
             }
+            Console.WriteLine("You entered wrong username/password 3 times. App is closing");
+            Thread.Sleep(3000);
+            return null;
         }
 
         public int ToInteger(int min, int max)
@@ -208,8 +217,8 @@ namespace DataBase
 
         public void AssigningStudentsInLists()
         {
-            var finishedStudents = students.Where(student => student.DoneWithTheTest = false).ToList();
-            var unFinishedStudents = students.Where(student => student.DoneWithTheTest = true).ToList();
+            var finishedStudents = students.Where(student => student.DoneWithTheTest == true).ToList();
+            var unFinishedStudents = students.Where(student => student.DoneWithTheTest == false).ToList();
 
             foreach (var teacher in teachers)
             {
