@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "oVe/8BCr7wpKGQEPMB7o7LB7h5QcnkypeDrZA3tcX2Dm3t6V9kj6TkYsD2X1lSoZoD/XotF/RsxpO/e16vRctQ==",
+  "success": true,
+  "projectFilePath": "D:\\Akademija\\5.C#-ADVANCED\\Class02\\DataBase\\DataBase.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Kiril\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}
