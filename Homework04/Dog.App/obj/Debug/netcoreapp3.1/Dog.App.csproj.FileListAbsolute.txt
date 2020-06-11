@@ -1,0 +1,4 @@
+D:\Akademija\5.C#-ADVANCED\HomeWork-C--Advanced\Homework04\Dog.App\obj\Debug\netcoreapp3.1\Dog.App.csprojAssemblyReference.cache
+D:\Akademija\5.C#-ADVANCED\HomeWork-C--Advanced\Homework04\Dog.App\obj\Debug\netcoreapp3.1\Dog.App.AssemblyInfoInputs.cache
+D:\Akademija\5.C#-ADVANCED\HomeWork-C--Advanced\Homework04\Dog.App\obj\Debug\netcoreapp3.1\Dog.App.AssemblyInfo.cs
+D:\Akademija\5.C#-ADVANCED\HomeWork-C--Advanced\Homework04\Dog.App\obj\Debug\netcoreapp3.1\Dog.App.csproj.CoreCompileInputs.cache
