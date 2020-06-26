@@ -7,7 +7,9 @@ namespace TimeTracking.Services.Services
 {
     public interface IMenus
     {
-        void LogInOrRegisterMenu(User user);
+        int MenuChoise(int range);
+        int LogInOrRegisterMenu();
+        int MainMenu();
 
     }
 }

@@ -1,0 +1,12 @@
+D:\Akademija\5.C#-ADVANCED\HomeWork-C--Advanced\TimeTracking\TimeTracking.Services\bin\Debug\netcoreapp3.1\TimeTracking.Services.deps.json
+D:\Akademija\5.C#-ADVANCED\HomeWork-C--Advanced\TimeTracking\TimeTracking.Services\bin\Debug\netcoreapp3.1\TimeTracking.Services.dll
+D:\Akademija\5.C#-ADVANCED\HomeWork-C--Advanced\TimeTracking\TimeTracking.Services\bin\Debug\netcoreapp3.1\TimeTracking.Services.pdb
+D:\Akademija\5.C#-ADVANCED\HomeWork-C--Advanced\TimeTracking\TimeTracking.Services\bin\Debug\netcoreapp3.1\TimeTracking.Db.dll
+D:\Akademija\5.C#-ADVANCED\HomeWork-C--Advanced\TimeTracking\TimeTracking.Services\bin\Debug\netcoreapp3.1\TimeTracking.Db.pdb
+D:\Akademija\5.C#-ADVANCED\HomeWork-C--Advanced\TimeTracking\TimeTracking.Services\obj\Debug\netcoreapp3.1\TimeTracking.Services.csprojAssemblyReference.cache
+D:\Akademija\5.C#-ADVANCED\HomeWork-C--Advanced\TimeTracking\TimeTracking.Services\obj\Debug\netcoreapp3.1\TimeTracking.Services.AssemblyInfoInputs.cache
+D:\Akademija\5.C#-ADVANCED\HomeWork-C--Advanced\TimeTracking\TimeTracking.Services\obj\Debug\netcoreapp3.1\TimeTracking.Services.AssemblyInfo.cs
+D:\Akademija\5.C#-ADVANCED\HomeWork-C--Advanced\TimeTracking\TimeTracking.Services\obj\Debug\netcoreapp3.1\TimeTracking.Services.csproj.CoreCompileInputs.cache
+D:\Akademija\5.C#-ADVANCED\HomeWork-C--Advanced\TimeTracking\TimeTracking.Services\obj\Debug\netcoreapp3.1\TimeTracking.Services.csproj.CopyComplete
+D:\Akademija\5.C#-ADVANCED\HomeWork-C--Advanced\TimeTracking\TimeTracking.Services\obj\Debug\netcoreapp3.1\TimeTracking.Services.dll
+D:\Akademija\5.C#-ADVANCED\HomeWork-C--Advanced\TimeTracking\TimeTracking.Services\obj\Debug\netcoreapp3.1\TimeTracking.Services.pdb

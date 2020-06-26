@@ -66,7 +66,11 @@ namespace TimeTracking.Services.Helpers
 
             foreach (char character in password.ToCharArray())
             {
-                if (char.IsNumber(character) && char.IsUpper(character))
+                if (char.IsNumber(character))
+                {
+                    continue;
+                }
+                if (char.IsUpper(character))
                 {
                     return password;
                 }

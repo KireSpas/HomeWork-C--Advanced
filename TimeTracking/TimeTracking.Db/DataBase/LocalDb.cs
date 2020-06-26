@@ -9,7 +9,7 @@ namespace TimeTracking.Db.DataBase
     public class LocalDb : IDataBase
     {
         public int IdCount { get; set; }
-        private List<User> db;
+        public List<User> db;
         public LocalDb()
         {
             db = new List<User>();

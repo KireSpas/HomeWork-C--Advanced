@@ -9,7 +9,7 @@ namespace TimeTracking.Services.Services
     {
         void ChangePassword(int userId, string oldPassword, string newPassword);
         void ChangeInfo(int userId, string firstName, string lastName);
-        User LogIn(string username, string password);
-        User Register(User user);
+        User LogIn();
+        User Register();
     }
 }
