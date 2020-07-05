@@ -10,7 +10,7 @@ namespace TimeTracking.Db.Entities
 
         public string GetInfo(User user)
         {
-            return $"Today {user.FirstName} desided to try {user.Activities.OtherHobbies.Name} as a new hobby and was doing it for {StopwatchTimeToString(user.Stopwatch)}";
+            return $"Today {user.FirstName} desided to try {Name} as a new hobby and was doing it for {StopwatchTimeToString(Stopwatch)}";
         }
     }
 }

@@ -12,8 +12,8 @@ namespace TimeTracking.Db.Entities
         public int Age { get; set; }
         public string Username { get; set; }
 		public string Password { get; set; }
-        public Stopwatch Stopwatch { get; set; }
-        public Activities Activities { get; set; }
+        public string Statistics { get; set; }
+
 
         public override string PrintInfo()
         {

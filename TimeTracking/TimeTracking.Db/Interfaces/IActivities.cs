@@ -9,6 +9,5 @@ namespace TimeTracking.Db.Interfaces
     public interface IActivities
     {
         string GetInfo(User user);
-
     }
 }

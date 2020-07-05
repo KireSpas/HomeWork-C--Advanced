@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Diagnostics.Tracing;
 using System.Threading;
 using TimeTracking.Db.DataBase;
@@ -12,6 +13,7 @@ namespace TimeTracking.App
     {
         public static IUserService _userService = new UserService();
         public static IMenus _menus = new Menus();
+        public static IActivitiesService<Activities> activitiesService = new ActivitiesService<Activities>();
         public static User _user;
 
         static void Main(string[] args)
@@ -47,6 +49,8 @@ namespace TimeTracking.App
                     switch (mainMenuChoise)
                     {
                         case 1:
+                            
+                            
                             //Reading
                             break;
                         case 2:
@@ -59,6 +63,7 @@ namespace TimeTracking.App
                             //Other Hobbies
                             break;
                         case 5:
+                            _user = null;
                             MessageHelper.Color("Thank you for using our service. Have a good day!",ConsoleColor.Green);
                             Thread.Sleep(3000);
                             breakMainMenu = false;

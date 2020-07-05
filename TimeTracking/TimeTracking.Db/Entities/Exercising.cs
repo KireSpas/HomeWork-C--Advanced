@@ -10,7 +10,7 @@ namespace TimeTracking.Db.Entities
 
         public string GetInfo(User user)
         {
-            return $"Today {user.FirstName} was doing {user.Activities.Exercising.ExcercisingType} excercise {StopwatchTimeToString(user.Stopwatch)}";
+            return $"Today {user.FirstName} was doing {ExcercisingType} excercise {StopwatchTimeToString(Stopwatch)}";
         }
     }
 }

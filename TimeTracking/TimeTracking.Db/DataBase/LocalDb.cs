@@ -10,11 +10,13 @@ namespace TimeTracking.Db.DataBase
     {
         public int IdCount { get; set; }
         public List<User> db;
+
         public LocalDb()
         {
             db = new List<User>();
             IdCount = 1;
         }
+        
         public List<User> GetAllUsers()
         {
             return db;

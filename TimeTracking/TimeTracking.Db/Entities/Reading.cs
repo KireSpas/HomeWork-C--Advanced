@@ -12,7 +12,7 @@ namespace TimeTracking.Db.Entities
 
         public string GetInfo(User user)
         {
-            return $"{user.FirstName} read {user.Activities.Reading.Pages} pages from the {user.Activities.Reading.Type} for {StopwatchTimeToString(user.Stopwatch)}";
+            return $"{user.FirstName} read {Pages} pages from the {Type} for {StopwatchTimeToString(Stopwatch)}";
         }
     }
 }

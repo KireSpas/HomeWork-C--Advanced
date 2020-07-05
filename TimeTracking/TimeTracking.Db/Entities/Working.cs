@@ -11,7 +11,7 @@ namespace TimeTracking.Db.Entities
 
         public string GetInfo(User user)
         {
-            return $"{user.FirstName} was working from {user.Activities.Working.WorkingFrom} for {StopwatchTimeToString(user.Stopwatch)}";
+            return $"{user.FirstName} was working from {WorkingFrom} for {StopwatchTimeToString(Stopwatch)}";
         }
     }
 }
