@@ -53,7 +53,15 @@ namespace TimeTracking.Services.Services
             Console.WriteLine("4) Other Hobbies");
             Console.WriteLine("5) Log Out");
             return MenuChoise(5);
+        }
 
+        public int ExerciseMenu()
+        {
+            Console.WriteLine("Please enter the type of the exercise that you were doing");
+            Console.WriteLine("1)General");
+            Console.WriteLine("2)Running");
+            Console.WriteLine("3)Sport");
+            return MenuChoise(3);
         }
 
     }

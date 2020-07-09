@@ -7,7 +7,6 @@ namespace TimeTracking.Db.Entities
     {
         public string Name { get; set; }
 
-
         public string GetInfo(User user)
         {
             return $"Today {user.FirstName} desided to try {Name} as a new hobby and was doing it for {StopwatchTimeToString(Stopwatch)}";

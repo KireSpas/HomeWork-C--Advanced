@@ -13,11 +13,16 @@ namespace TimeTracking.App
     {
         public static IUserService _userService = new UserService();
         public static IMenus _menus = new Menus();
-        public static IActivitiesService<Activities> activitiesService = new ActivitiesService<Activities>();
+        public static IActivitiesService<Exercising> _exercisingService = new ExercisingService<Exercising>();
+        public static IActivitiesService<OtherHobbies> _otherHobbiesService = new OtherHobbiesService<OtherHobbies>();
+        public static IActivitiesService<Reading> _readingService = new ReadingService<Reading>();
+        public static IActivitiesService<Working> _workingService = new WorkingService<Working>();
         public static User _user;
 
         static void Main(string[] args)
         {
+            
+            
             while (true)
             {
                 Console.Clear();
@@ -27,10 +32,7 @@ namespace TimeTracking.App
                     if (registerOrLoginChoise == 1)
                     {
                         _user = _userService.LogIn();
-                        if (_user == null)
-                        {
-                            Environment.Exit(0);
-                        }
+                        if (_user == null) Environment.Exit(0);
                         break;
                     }
                     else
@@ -55,6 +57,24 @@ namespace TimeTracking.App
                             break;
                         case 2:
                             //Excercising
+                            Exercising exercise = new Exercising();
+
+                            //_exercisingService.DoActivity(exercise);
+                            int exerciseType =  _menus.ExerciseMenu();
+                            switch (exerciseType)
+                            {
+                                case 1:
+                                    exercise.ExcercisingType = Db.Enums.ExcercisingType.General;
+                                    break;
+                                case 2:
+                                    exercise.ExcercisingType = Db.Enums.ExcercisingType.Running;
+                                    break;
+                                case 3:
+                                    exercise.ExcercisingType = Db.Enums.ExcercisingType.Sport;
+                                    break;
+                            }
+                            Console.WriteLine(exercise.ExcercisingType);
+
                             break;
                         case 3:
                             //Working

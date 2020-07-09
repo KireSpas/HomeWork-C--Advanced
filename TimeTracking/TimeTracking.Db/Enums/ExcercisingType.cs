@@ -6,8 +6,8 @@ namespace TimeTracking.Db.Enums
 {
     public enum ExcercisingType
     {
-        General,
-        Running,
-        Sport
+        General =1,
+        Running = 2,
+        Sport = 3
     }
 }

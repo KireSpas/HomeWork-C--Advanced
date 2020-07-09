@@ -7,7 +7,6 @@ namespace TimeTracking.Services.Services
 {
     public interface IActivitiesService<T> where T : BaseActivities
     {
-        void StartActivity(T user);
-        T EndActivity(T user);
+        void DoActivity(T activity);
     }
 }

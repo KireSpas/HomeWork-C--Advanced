@@ -10,6 +10,7 @@ namespace TimeTracking.Services.Services
         int MenuChoise(int range);
         int LogInOrRegisterMenu();
         int MainMenu();
+        int ExerciseMenu();
 
     }
 }
