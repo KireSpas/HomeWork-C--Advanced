@@ -46,13 +46,13 @@ namespace TimeTracking.App
                 bool mainMenu = true;
                 while (mainMenu)
                 {
-                    int mainMenuChoise = _menus.MainMenu();
-                    switch (mainMenuChoise)
+                    switch (_menus.MainMenu())
                     {
                         case 1:
                             bool breakTrackMenu = true;
                             while (breakTrackMenu)
                             {
+                                Console.Clear();
                                 int trackMenuChoise = _menus.TrackMenu();
                                 switch (trackMenuChoise)
                                 {
@@ -62,8 +62,7 @@ namespace TimeTracking.App
                                         reading.Stopwatch = _activitiesService.ActivityTime("reading");
                                         MessageHelper.Color("Please enter number of pages that you have read", ConsoleColor.Green);
                                         reading.Pages = ValidationHelper.ParsedNumber(Console.ReadLine());
-                                        int readingType = _menus.ReadingMenu();
-                                        switch (readingType)
+                                        switch (_menus.ReadingMenu())
                                         {
                                             case 1:
                                                 reading.Type = Db.Enums.ReadingType.BellesLettres;
@@ -77,14 +76,13 @@ namespace TimeTracking.App
                                         }
                                         _readingService.InsertReading(reading);
 
-                                        MessageHelper.Color($"Mr.{_user.LastName} you have been reading for {reading.Stopwatch.Elapsed} seconds and you read {reading.Pages} pages from the {reading.Type} genre ", ConsoleColor.Yellow);
+                                        MessageHelper.Color($"Mr.{_user.LastName} you have been reading for {reading.Stopwatch.Elapsed.Seconds} seconds and you read {reading.Pages} pages from the book that has genre {reading.Type}", ConsoleColor.Yellow);
                                         break;
                                     case 2:
                                         //Excercising
                                         Exercising exercise = new Exercising();
                                         exercise.Stopwatch = _activitiesService.ActivityTime("exercising");
-                                        int exerciseType = _menus.ExerciseMenu();
-                                        switch (exerciseType)
+                                        switch (_menus.ExerciseMenu())
                                         {
                                             case 1:
                                                 exercise.ExcercisingType = Db.Enums.ExcercisingType.General;
@@ -97,14 +95,13 @@ namespace TimeTracking.App
                                                 break;
                                         }
                                         _exercisingService.InsertExercise(exercise);
-                                        MessageHelper.Color($"Mr.{_user.LastName} you have been doing {exercise.ExcercisingType} exercise for {exercise.Stopwatch.Elapsed}seconds", ConsoleColor.Yellow);
+                                        MessageHelper.Color($"Mr.{_user.LastName} you have been doing {exercise.ExcercisingType} exercise for {exercise.Stopwatch.Elapsed.Seconds}seconds", ConsoleColor.Yellow);
                                         break;
                                     case 3:
                                         //Working
                                         Working working = new Working();
                                         working.Stopwatch = _activitiesService.ActivityTime("working");
-                                        int workingFrom = _menus.WorkingMenu();
-                                        switch (workingFrom)
+                                        switch (_menus.WorkingMenu())
                                         {
                                             case 1:
                                                 working.WorkingFrom = Db.Enums.WorkingFrom.Office;
@@ -114,7 +111,7 @@ namespace TimeTracking.App
                                                 break;
                                         }
                                         _workingService.InsertWork(working);
-                                        MessageHelper.Color($"Mr.{_user.LastName} you have been working from {working.WorkingFrom} for {working.Stopwatch.Elapsed} seconds", ConsoleColor.Yellow);
+                                        MessageHelper.Color($"Mr.{_user.LastName} you have been working from {working.WorkingFrom} for {working.Stopwatch.Elapsed.Seconds} seconds", ConsoleColor.Yellow);
                                         break;
                                     case 4:
                                         //Other Hobbies
@@ -123,12 +120,11 @@ namespace TimeTracking.App
                                         otherHobbie.Name = Console.ReadLine();
                                         otherHobbie.Stopwatch = _activitiesService.ActivityTime(otherHobbie.Name);
                                         _otherHobbiesService.InsertOtherHobbies(otherHobbie);
-                                        MessageHelper.Color($"Mr.{_user.LastName} you have been doing your new hobbie {otherHobbie.Name} for {otherHobbie.Stopwatch.Elapsed} seconds", ConsoleColor.Yellow);
+                                        MessageHelper.Color($"Mr.{_user.LastName} you have been doing your new hobbie {otherHobbie.Name} for {otherHobbie.Stopwatch.Elapsed.Seconds} seconds", ConsoleColor.Yellow);
                                         break;
                                     case 5:
-                                        _user = null;
-                                        MessageHelper.Color("Thank you for using our service. Have a good day!", ConsoleColor.Green);
-                                        Thread.Sleep(3000);
+                                        MessageHelper.Color("Going back to Main Menu!", ConsoleColor.Green);
+                                        Thread.Sleep(2000);
                                         breakTrackMenu = false;
                                         break;
                                 }
@@ -141,7 +137,9 @@ namespace TimeTracking.App
                             //Acc Mngmnt
                             break;
                         case 4:
-                            //Log out
+                            _user = null;
+                            MessageHelper.Color("Thank you for using our application! Have a good day!", ConsoleColor.Green);                            
+                            mainMenu = false;
                             break;
                     }
                 }
