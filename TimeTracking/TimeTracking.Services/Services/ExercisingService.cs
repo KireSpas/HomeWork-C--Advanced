@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -10,7 +11,7 @@ using TimeTracking.Services.Helpers;
 
 namespace TimeTracking.Services.Services
 {
-    public class ExercisingService<T> : IActivitiesService<T> where T : Exercising
+    public class ExercisingService<T> where T : Exercising
     {
         public IActivitiesDb<Exercising> _exercisingDb;
 
@@ -19,18 +20,15 @@ namespace TimeTracking.Services.Services
             _exercisingDb = new ActivitiesDb<Exercising>();
         }
 
-        public void DoActivity(T exercise)
+        public void InsertExercise(Exercising exercise)
         {
-            exercise.Stopwatch.Start();
-            MessageHelper.Color($"You have started exercising", ConsoleColor.Green);
-            MessageHelper.Color("Press any key when you stop exercising", ConsoleColor.Yellow);
-
-
-            Console.ReadLine();
-            exercise.Stopwatch.Stop();
-            MessageHelper.Color($"You have stoped exercising", ConsoleColor.Green);
+            _exercisingDb.InsertActivity(exercise);
         }
 
-
+        public List<Exercising> GetAllExercises()
+        {
+            return _exercisingDb.GetAllActivities();
+        }
+        
     }
 }

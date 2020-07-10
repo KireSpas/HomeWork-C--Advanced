@@ -22,9 +22,18 @@ namespace TimeTracking.Db.DataBase
             return activities;
         }
 
+        public void InsertActivity(T activity)
+        {
+            activity.Id = IdCount;
+            activities.Add(activity);
+            IdCount++;
+        }
+
         public T GetById(int id)
         {
             return activities.FirstOrDefault(x => x.Id == id);
         }
+
+
     }
 }

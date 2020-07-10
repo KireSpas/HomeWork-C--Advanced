@@ -6,7 +6,7 @@ using TimeTracking.Db.Entities;
 
 namespace TimeTracking.Services.Services
 {
-    public class ReadingService<T> : IActivitiesService<T> where T : BaseActivities
+    public class ReadingService<T> where T : Reading
     {
         public IActivitiesDb<Reading> _readingDb;
         public ReadingService()
@@ -14,9 +14,15 @@ namespace TimeTracking.Services.Services
             _readingDb = new ActivitiesDb<Reading>();
         }
 
-        public void DoActivity(T activity)
+        public void InsertReading(Reading reading)
         {
-            throw new NotImplementedException();
+            _readingDb.InsertActivity(reading);
         }
+
+        public List<Reading> GetAllExercises()
+        {
+            return _readingDb.GetAllActivities();
+        }
+
     }
 }

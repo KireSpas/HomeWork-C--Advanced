@@ -46,22 +46,50 @@ namespace TimeTracking.Services.Services
         public int MainMenu()
         {
             Console.WriteLine("Welcome to Main Menu");
+            Console.WriteLine("Please choose one of the options");
+            Console.WriteLine("1)Track Activity");
+            Console.WriteLine("2)Statistics");
+            Console.WriteLine("3)Account Management");
+            MessageHelper.Color("4)Log Out", ConsoleColor.Red);
+            return MenuChoise(4);
+        }
+
+        public int TrackMenu()
+        {
+            Console.WriteLine("Welcome to Track Menu");
             Console.WriteLine("What activity are we gonna do today?");
             Console.WriteLine("1) Reading");
             Console.WriteLine("2) Exercising");
             Console.WriteLine("3) Working");
             Console.WriteLine("4) Other Hobbies");
-            Console.WriteLine("5) Log Out");
+            Console.WriteLine("5) Go Back");
             return MenuChoise(5);
         }
 
         public int ExerciseMenu()
         {
-            Console.WriteLine("Please enter the type of the exercise that you were doing");
+            MessageHelper.Color("Please enter the type of the exercise that you were doing",ConsoleColor.Green);
             Console.WriteLine("1)General");
             Console.WriteLine("2)Running");
             Console.WriteLine("3)Sport");
             return MenuChoise(3);
+        }
+
+        public int ReadingMenu()
+        {
+            MessageHelper.Color("Please enter the type of the book that you were reading", ConsoleColor.Green);
+            Console.WriteLine("1)Belles Lettres");
+            Console.WriteLine("2)Fiction");
+            Console.WriteLine("3)Professional Literature");
+            return MenuChoise(3);
+        }
+
+        public int WorkingMenu()
+        {
+            MessageHelper.Color("Where did you work from",ConsoleColor.Green);
+            Console.WriteLine("1)Office");
+            Console.WriteLine("2)Home");
+            return MenuChoise(2);
         }
 
     }

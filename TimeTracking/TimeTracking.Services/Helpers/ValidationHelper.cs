@@ -77,5 +77,25 @@ namespace TimeTracking.Services.Helpers
             }
             return null;
         }
+
+        public static int ParsedNumber(string number)
+        {
+            int num = 0;
+            while (true)
+            {
+                bool isNumber = int.TryParse(number, out num);
+                if (!isNumber)
+                {
+                    MessageHelper.Color("Wrong input inserted", ConsoleColor.Red);
+                    Console.WriteLine("Please try again");
+                    number = Console.ReadLine();
+                }
+                else
+                {
+                    break;
+                } 
+            }
+            return num;
+        }
     }
 }

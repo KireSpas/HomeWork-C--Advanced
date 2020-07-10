@@ -8,18 +8,17 @@ namespace TimeTracking.Db.Entities
     public class BaseActivities
     {
         public int Id { get; set; }
-        public Stopwatch Statistic { get; set; }
         public Stopwatch Stopwatch { get; set; }
+
+        public double StopwatchSeconds(Stopwatch stopwatch)
+        {
+            return stopwatch.Elapsed.TotalSeconds;
+        }
 
         public string StopwatchTimeToString(Stopwatch stopwatch)
         {
-            TimeSpan timeSpan = Stopwatch.Elapsed;
-            return $"{timeSpan.Minutes}minutes and {timeSpan.Seconds}seconds";
+            return $"Your time for the actibity was {stopwatch.Elapsed.Minutes}minutes and {stopwatch.Elapsed.Seconds}seconds";
         }
 
-        public string ShowStatistics()
-        {
-            return $"Your statistics: { StopwatchTimeToString(Statistic)}";
-        }
     }
 }

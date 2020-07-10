@@ -9,5 +9,6 @@ namespace TimeTracking.Db.DataBase
     {
         List<T> GetAllActivities();
         T GetById(int id);
+        void InsertActivity(T activity);
     }
 }
