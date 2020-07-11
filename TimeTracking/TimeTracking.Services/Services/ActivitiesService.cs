@@ -22,5 +22,15 @@ namespace TimeTracking.Services.Services
 			Console.WriteLine($"You have stopped {name}");
 			return stopwatch;
 		}
-    }
+
+		public int TotalActivityTime(List<int> list)
+        {
+			int result = 0;
+            foreach (var item in list)
+            {
+				result += item;
+            }
+			return result;
+        }
+	}
 }

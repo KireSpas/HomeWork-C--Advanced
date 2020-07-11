@@ -14,6 +14,7 @@ namespace TimeTracking.Services.Services
         int ExerciseMenu();
         int ReadingMenu();
         int WorkingMenu();
-
+        int StatsMenu();
+        int AccManagement();
     }
 }

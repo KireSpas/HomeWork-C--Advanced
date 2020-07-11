@@ -24,12 +24,14 @@ namespace TimeTracking.Services.Services
 			if (ValidationHelper.ValidateString(firstName) == null
 				|| ValidationHelper.ValidateString(lastName) == null)
 			{
-				MessageHelper.Color("[Error] strings were not valid. Please try again!", ConsoleColor.Red);
+				MessageHelper.Color("[Error] Strings were not valid!", ConsoleColor.Red);
+				Thread.Sleep(3000);
 				return;
 			}
 			user.FirstName = firstName;
 			user.LastName = lastName;
 			_db.UpdateUser(user);
+			MessageHelper.Color("Updating First and Last name...",ConsoleColor.Green);
 			Styles.Spiner();
 			MessageHelper.Color("Data successfuly changed!", ConsoleColor.Green);
 		}
@@ -40,15 +42,18 @@ namespace TimeTracking.Services.Services
 			if (user.Password != oldPassword)
 			{
 				MessageHelper.Color("[Error] Old password did not match", ConsoleColor.Red);
+				Thread.Sleep(3000);
 				return;
 			}
 			if (ValidationHelper.ValidatePassword(newPassword) == null)
 			{
 				MessageHelper.Color("[Error] New password is not valid", ConsoleColor.Red);
+				Thread.Sleep(3000);
 				return;
 			}
 			user.Password = newPassword;
 			_db.UpdateUser(user);
+			MessageHelper.Color("Changing password...", ConsoleColor.Green);
 			Styles.Spiner();
 			MessageHelper.Color("Password successfuly changed!", ConsoleColor.Green);
 		}
@@ -110,9 +115,14 @@ namespace TimeTracking.Services.Services
 			Console.WriteLine("Registering user...");
 			Styles.Spiner();
 			MessageHelper.Color("You have been successfully registered", ConsoleColor.Green);
-			Thread.Sleep(3000);
+			Thread.Sleep(1500);
 
 			return _db.GetUserById(id);
+		}
+
+		public void RemoveUser(int userId)
+        {
+			_db.RemoveUser(userId);
 		}
 
 

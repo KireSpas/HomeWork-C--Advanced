@@ -12,5 +12,6 @@ namespace TimeTracking.Services.Services
         void ChangeInfo(int userId, string firstName, string lastName);
         User LogIn();
         User Register();
+        void RemoveUser(int userId);
     }
 }

@@ -8,5 +8,6 @@ namespace TimeTracking.Services.Services
     public interface IActivitiesService
     {
         Stopwatch ActivityTime(string name);
+        int TotalActivityTime(List<int> list);
     }
 }
